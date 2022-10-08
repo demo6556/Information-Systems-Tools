@@ -1,0 +1,17 @@
+ЗАДАНИЕ 1
+
+docker pull --help
+docker run --help
+docker exec --help
+
+ЗАДАНИЕ 2
+
+docker run --name my-mongo -d mongo
+
+ЗАДАНИЕ 3
+
+docker exec -it my-mongo mongo
+> db.version()
+5.0.13
+> exit
+bye
