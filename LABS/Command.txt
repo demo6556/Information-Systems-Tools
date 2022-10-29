@@ -29,4 +29,4 @@ select date(send_time), user_from_id, count(1) as cnt from user_private_message 
 Task 9:
 use my_db -> show collections (posts, users)
 
-db.users.aggregate( [ {$match : { 'vists': {$gt: 300}} } , {$project: {name: {$substr: [ '$first_name', 0, 1]}}, karma: "$karma"}, {$group: { _id: "$name" , summ: { $sum: "$karma"}}}])
+db.users.aggregate( [ {$match : { 'vists': {$gt: 300}} } , {$project: {karma: "$karma", name: {$substr: [ '$first_name', 0, 1]}}}, {$group: { _id: "$name" , summ: { $sum: "$karma"}}}])
